@@ -10,7 +10,7 @@ struct player
 int main()
 {
     struct player ply[10];
-    int n, plyCount = 0, highSalCount = 0;
+    int n;
     printf("\nEnter the number of players: ");
     scanf("%d", &n);
     for (int i = 0; i < n; i++)
