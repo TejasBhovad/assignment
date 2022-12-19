@@ -41,7 +41,6 @@ int main()
     int ar_3[15];
     int ar_1[8] = {1, 5, 2, 9, 4, 5, 6, 3};
     int ar_2[7] = {3, 1, 5, 6, 9, 3, 4};
-    printf("Before Sort:\n");
     printArray(ar_1, 8, 1);
     printArray(ar_2, 7, 2);
     SortArray(ar_1, 8);
