@@ -1,13 +1,4 @@
 #include <stdio.h>
-void callValue(int a, int b)
-{
-    int tmp;
-    tmp = a;
-    a = b;
-    b = tmp;
-    printf("\nAfter Call by Value Swap:\n");
-    printf("A: %d\nB: %d", a, b);
-}
 void referenceValue(int *m, int *n)
 {
     int tmp;
@@ -24,9 +15,6 @@ int main()
     scanf("%d", &a);
     printf("Value of B:");
     scanf("%d", &b);
-    printf("\nBefore Call by Value Swap:\n");
-    printf("A: %d\nB: %d", a, b);
-    callValue(a, b);
     printf("\nBefore Call by Reference Swap:\n");
     printf("A: %d\nB: %d", a, b);
     referenceValue(&a, &b);
