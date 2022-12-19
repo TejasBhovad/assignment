@@ -2,9 +2,9 @@
 int main()
 {
     char name[30];
-    int i, blankFlag = 0, digitFlag = 0, vowelFlag = 0;
-    printf("\mEnter String: ");
-    scanf("%[^\n]%s", &name);
+    int i, blankFlag = 0, digitFlag = 0, vowelFlag = 0, consonantFlag = 0;
+    printf("\nEnter String: ");
+    scanf("%[^\n]s", name);
     // Length of String
     for (i = 0; name[i] != '\0'; ++i)
         ;
@@ -19,15 +19,23 @@ int main()
         {
             digitFlag++;
         }
-        else if (name[i] == 'a' || name[i] == 'e' || name[i] == 'i' || name[i] == 'o' || name[i] == 'u')
+        else if ((name[i] >= 'a' && name[i] <= 'z')||(name[i] >= 'A' && name[i] <= 'Z'))
         {
-            vowelFlag++;
+            if (name[i] == 'a' || name[i] == 'e' || name[i] == 'i' || name[i] == 'o' || name[i] == 'u'||name[i] == 'A' || name[i] == 'E' || name[i] == 'I' || name[i] == 'O' || name[i] == 'U')
+            {
+                vowelFlag++;
+            }
+            else
+            {
+                consonantFlag++;
+            }
         }
-        printf("\nNo of Blanks Spaces: %d", blankFlag);
-        printf("\nNo of Vowels: %d", vowelFlag);
-        printf("\nNo of Consonants: %d", n - vowelFlag);
-        printf("\nNo of Digits: %d", digitFlag);
-        printf("\n");
     }
+    printf("\nNo of Blanks Spaces: %d", blankFlag);
+    printf("\nNo of Vowels: %d", vowelFlag);
+    printf("\nNo of Consonants: %d", consonantFlag);
+    printf("\nNo of Digits: %d", digitFlag);
+    printf("\n");
+
     return 0;
 }
