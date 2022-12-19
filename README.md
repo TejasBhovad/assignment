@@ -20,13 +20,13 @@ int main()
         {
             blankFlag++;
         }
-        else if (name[i] == '1' || name[i] == '2' || name[i] == '3' || name[i] == '4' || name[i] == '5' || name[i] == '6' || name[i] == '7' || name[i] == '8' || name[i] == '9')
+        else if (name[i] == '1' || name[i] == '2' || name[i] == '3' || name[i] == '4' || name[i] == '5' || name[i] == '6' || name[i] == '7' || name[i] == '8' || name[i] == '9' || name[i] == '0')
         {
             digitFlag++;
         }
-        else if ((name[i] >= 'a' && name[i] <= 'z')||(name[i] >= 'A' && name[i] <= 'Z'))
+        else if ((name[i] >= 'a' && name[i] <= 'z') || (name[i] >= 'A' && name[i] <= 'Z'))
         {
-            if (name[i] == 'a' || name[i] == 'e' || name[i] == 'i' || name[i] == 'o' || name[i] == 'u'||name[i] == 'A' || name[i] == 'E' || name[i] == 'I' || name[i] == 'O' || name[i] == 'U')
+            if (name[i] == 'a' || name[i] == 'e' || name[i] == 'i' || name[i] == 'o' || name[i] == 'u' || name[i] == 'A' || name[i] == 'E' || name[i] == 'I' || name[i] == 'O' || name[i] == 'U')
             {
                 vowelFlag++;
             }
@@ -168,7 +168,7 @@ struct player
 int main()
 {
     struct player ply[10];
-    int n, plyCount = 0, highSalCount = 0;
+    int n;
     printf("\nEnter the number of players: ");
     scanf("%d", &n);
     for (int i = 0; i < n; i++)
@@ -211,15 +211,6 @@ int main()
 
 ```c
 #include <stdio.h>
-void callValue(int a, int b)
-{
-    int tmp;
-    tmp = a;
-    a = b;
-    b = tmp;
-    printf("\nAfter Call by Value Swap:\n");
-    printf("A: %d\nB: %d", a, b);
-}
 void referenceValue(int *m, int *n)
 {
     int tmp;
@@ -236,9 +227,6 @@ int main()
     scanf("%d", &a);
     printf("Value of B:");
     scanf("%d", &b);
-    printf("\nBefore Call by Value Swap:\n");
-    printf("A: %d\nB: %d", a, b);
-    callValue(a, b);
     printf("\nBefore Call by Reference Swap:\n");
     printf("A: %d\nB: %d", a, b);
     referenceValue(&a, &b);
